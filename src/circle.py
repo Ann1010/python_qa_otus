@@ -14,4 +14,4 @@ class Circle(Figure):
         return math.pi * self.r**2
 
     def get_perimetr(self) -> float:
-        return  2 * math.pi * self.r
+        return 2 * math.pi * self.r
