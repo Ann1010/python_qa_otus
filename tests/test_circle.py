@@ -12,7 +12,7 @@ class TestCircle:
     @pytest.mark.parametrize("radius", [5, 0.1], ids=["integer", "float"])
     def test_check_area(self, radius):
         """Проверка вычисления площади круга"""
-        rec = Circle(r=radius)
+        rec = Circle(radius)
         assert rec.get_area() == math.pi * radius**2, \
             f"Полученная площадь круга отличается от ожидаемой"
 
