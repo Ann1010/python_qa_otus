@@ -1,4 +1,4 @@
-from rectagle import Rectangle
+from python_qa_otus.src.rectagle import Rectangle
 
 
 class Square(Rectangle):

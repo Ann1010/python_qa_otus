@@ -1,4 +1,4 @@
-from figure import Figure
+from python_qa_otus.src.figure import Figure
 
 
 class Rectangle(Figure):
@@ -12,5 +12,5 @@ class Rectangle(Figure):
     def get_area(self) -> float:
         return self.a * self.b
 
-    def get_perimetr(self) -> float:
+    def get_perimeter(self) -> float:
         return 2 * (self.a + self.b)

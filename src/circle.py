@@ -1,6 +1,6 @@
 import math
 
-from figure import Figure
+from python_qa_otus.src.figure import Figure
 
 
 class Circle(Figure):
@@ -13,5 +13,5 @@ class Circle(Figure):
     def get_area(self) -> float:
         return math.pi * self.r**2
 
-    def get_perimetr(self) -> float:
+    def get_perimeter(self) -> float:
         return 2 * math.pi * self.r

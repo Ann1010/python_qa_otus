@@ -10,7 +10,7 @@ class Figure(ABC):
         pass
 
     @abstractmethod
-    def get_perimetr(self):
+    def get_perimeter(self):
         pass
 
     def add_area(self, other_figure):
