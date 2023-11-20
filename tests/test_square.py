@@ -12,24 +12,24 @@ class TestSquare:
     @pytest.mark.parametrize("side_a", [5, 0.1], ids=["integer", "float"])
     def test_check_area(self, side_a):
         """Проверка вычисления площади квадрата"""
-        rec = Square(side_a)
-        assert rec.get_area() == side_a * side_a, \
-            f"Полученная площадь квадрата отличается от ожидаемой"
+        square = Square(side_a)
+        assert square.get_area() == side_a * side_a, \
+            "Полученная площадь квадрата отличается от ожидаемой"
 
     @pytest.mark.perimeter
     @pytest.mark.parametrize("side_a", [5, 0.1], ids=["integer", "float"])
     def test_check_perimeter(self, side_a):
         """Проверка вычисления периметра квадрата"""
-        rec = Square(side_a)
-        assert rec.get_perimeter() == 4 * side_a, \
-            f"Полученный периметр квадрата отличается от ожидаемого"
+        square = Square(side_a)
+        assert square.get_perimeter() == 4 * side_a, \
+            "Полученный периметр квадрата отличается от ожидаемого"
 
     @pytest.mark.add
     def test_check_add_with_triangle(self):
         """Проверка сложения квадрата с треугольником"""
-        rec = Square(5)
+        square = Square(5)
         triangle = Triangle(2, 4, 3)
-        assert rec.add_area(triangle) == rec.get_area() + triangle.get_area(), \
+        assert square.add_area(triangle) == square.get_area() + triangle.get_area(), \
             "Сумма двух фигур отличается от ожидаемой"
 
     @pytest.mark.negative

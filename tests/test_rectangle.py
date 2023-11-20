@@ -10,24 +10,24 @@ class TestRectangle:
     @pytest.mark.parametrize(("side_a", "side_b"), [(5, 8), (5.3, 9.1)], ids=["integer", "float"])
     def test_check_area(self, side_a, side_b):
         """Проверка вычисления площади прямоугольника"""
-        rec = Rectangle(side_a, side_b)
-        assert rec.get_area() == side_a * side_b, \
-            f"Полученная площадь прямоугольника отличается от ожидаемой"
+        rectangle = Rectangle(side_a, side_b)
+        assert rectangle.get_area() == side_a * side_b, \
+            "Полученная площадь прямоугольника отличается от ожидаемой"
 
     @pytest.mark.perimeter
     @pytest.mark.parametrize(("side_a", "side_b"), [(5, 8), (5.3, 9.1)], ids=["integer", "float"])
     def test_check_perimeter(self, side_a, side_b):
         """Проверка вычисления периметра прямоугольника"""
-        rec = Rectangle(side_a, side_b)
-        assert rec.get_perimeter() == 2 * (side_a + side_b), \
-            f"Полученный периметр прямоугольника отличается от ожидаемого"
+        rectangle = Rectangle(side_a, side_b)
+        assert rectangle.get_perimeter() == 2 * (side_a + side_b), \
+            "Полученный периметр прямоугольника отличается от ожидаемого"
 
     @pytest.mark.add
     def test_check_add_with_triangle(self):
         """Проверка сложения прямоугольника с треугольником"""
-        rec = Rectangle(5, 3)
+        rectangle = Rectangle(5, 3)
         triangle = Triangle(2, 4, 3)
-        assert rec.add_area(triangle) == rec.get_area() + triangle.get_area(), \
+        assert rectangle.add_area(triangle) == rectangle.get_area() + triangle.get_area(), \
             "Сумма двух фигур отличается от ожидаемой"
 
     @pytest.mark.negative
