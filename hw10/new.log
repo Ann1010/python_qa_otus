@@ -1,0 +1,2 @@
+193.106.31.130 - - [24/Sep/2019:16:46:56 +0200] "GET /administrator/index.php HTTP/1.0" 200 4250 "-" "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)" 5712
+193.106.31.130 - - [24/Sep/2019:16:46:56 +0200] "POST /administrator/index.php HTTP/1.0" 200 4481 "-" "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)" 6621
